@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics Js</title>
+</head>
+<body>
+    <h1>JS Basics</h1>
+    <hr>
+    <input type="number" name="number" id="numberInput">
+    <button onclick="OddEven()">EvenOdd</button>
+    <p id="para">The Num Is:</p>
+    <script>
+        var num=0;
+        // var text=document.getElementById('para').textContent;
+        function OddEven(){
+            num=document.getElementById('numberInput').value
+            if(num % 2 ==0){
+                console.log('Number Is Even');
+            //    document.write(text + "Even");
+               document.getElementById('para').innerText=document.getElementById('para').innerText+"Even"
+            }
+            else{
+                console.log('Number Is Odd');
+                // document.write(text + "Odd");
+                document.getElementById('para').innerText=document.getElementById('para').innerText+"Odd"
+
+            }
+        }
+
+
+    </script>
+</body>
+</html>
