@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Planner</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="display-4 text-center">Activity Planner</h1>
+        <hr>
+        <div class="d-flex justify-content-start align-items-center">
+            <input type="text" class="form-control" name="TextInput" id="TextInput" placeholder="Enter an activity" aria-label="Enter an activity">
+            <button class="btn btn-primary ml-2" onclick="ActivityPlanner()">Submit</button>
+        </div>
+        <ul class="list-group mt-4" id="ActivityPlannerList"></ul>
+    </div>
+
+    <!-- Include Bootstrap JS (Optional, if you need Bootstrap JS components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Link to your external JS file -->
+    <script src="./ActivityPlanner.js"></script>
+</body>
+</html>
