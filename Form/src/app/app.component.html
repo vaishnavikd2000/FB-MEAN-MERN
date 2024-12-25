@@ -1,0 +1,20 @@
+<div class="container">
+  <h1 class="display-5 mt-3 py-2">Login Form</h1>
+  <hr>
+  <form (ngSubmit)="handleLoginSubmit(loginForm)" #loginForm="ngForm">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" #email="ngModel"
+        [(ngModel)]="user.userEmail" name="email" required>
+      <div id="emailError" class="form-text text-danger" *ngIf="email.invalid">Email Can't Be Empty.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" #password="ngModel"
+        [(ngModel)]="user.userPassword" name="password" required>
+        <div id="passwordError" class="form-text text-danger" *ngIf="password.invalid">Password Can't Be Empty.</div>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
