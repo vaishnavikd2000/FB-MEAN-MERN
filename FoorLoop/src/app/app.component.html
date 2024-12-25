@@ -3,12 +3,24 @@
   <hr>
   <p class="display-5 mt-3 py-2">Fruits</p>
   <ul class="list-group">
-    <li class="list-group-item d-flex justify-content-between" *ngFor=" let fruit of fruits let i=index " >
-     <span class="lead"> {{fruit}}</span>
-     <button type="button" class="btn btn-danger" (click)="deleteFruits(i)">
-      <i class="bi bi-trash"></i> Delete
-    </button>
+    <li class="list-group-item d-flex justify-content-between" *ngFor="let fruit of fruits; let i = index">
+      <span class="lead">{{ fruit }}</span>
+      <button type="button" class="btn btn-danger" (click)="deleteFruits(i)">
+        <i class="bi bi-trash"></i> Delete
+      </button>
     </li>
   </ul>
- 
+  <div class="input-group mb-3 mt-2">
+    <input type="text" class="form-control" placeholder="Enter Fruit Name" name="newFruit" [(ngModel)]="newFruit"
+      (input)="onInputChange()" required />
+    <button class="btn btn-primary" type="submit" (click)="addFruit()" [disabled]="isButtonDisabled">
+      Submit
+    </button>
+    <!-- <button class="btn btn-primary" type="submit" (click)="addFruit()" [disabled]="newFruit.length===0">
+      Submit
+    </button> -->
+    <!-- <button class="btn btn-primary" type="submit" (click)="addFruit()" [disabled]="newFruit==='' ">
+      Submit
+    </button> -->
+  </div>
 </div>
