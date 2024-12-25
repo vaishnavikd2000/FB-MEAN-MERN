@@ -1,0 +1,14 @@
+<div class="container">
+  <h1 class="display-5 mt-3 py-2">Iterative Rendering</h1>
+  <hr>
+  <p class="display-5 mt-3 py-2">Fruits</p>
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between" *ngFor=" let fruit of fruits let i=index " >
+     <span class="lead"> {{fruit}}</span>
+     <button type="button" class="btn btn-danger" (click)="deleteFruits(i)">
+      <i class="bi bi-trash"></i> Delete
+    </button>
+    </li>
+  </ul>
+ 
+</div>
