@@ -1,0 +1,10 @@
+<div class="container">
+  <h1 class="display-5 mt-3 py-2">Condational Rendering</h1>
+  <hr>
+
+  <p class="lead" *ngIf="flag">This is Some Text.</p>
+  <button class="btn btn-primary me-2" (click)="hide()">Hide </button>
+  <button class="btn btn-warning me-2" (click)="show()">Show</button>
+  <button class="btn btn-success" (click)="toggle()">Toggle</button>
+ 
+</div>
