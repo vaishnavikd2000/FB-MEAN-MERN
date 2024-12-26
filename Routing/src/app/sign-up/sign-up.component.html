@@ -1,0 +1,72 @@
+<div class="container">
+    <h1 class="display-5 mt-3 py-2">SignUp Form</h1>
+    <hr>
+    <form (ngSubmit)="handleSignupSubmit(signupForm)" #signupForm="ngForm">
+      <!-- Full Name Field -->
+      <div class="mb-3">
+        <label for="fullName" class="form-label">Full Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="fullName"
+          #fullName="ngModel"
+          [(ngModel)]="user.userFullName"
+          name="fullName"
+          required
+        />
+        <div id="fullNameError" class="form-text text-danger" *ngIf="fullName.invalid">Full Name Can't Be Empty.</div>
+      </div>
+  
+      <!-- Email Address Field -->
+      <div class="mb-3">
+        <label for="signupEmail" class="form-label">Email Address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="signupEmail"
+          #email="ngModel"
+          [(ngModel)]="user.userEmail"
+          name="email"
+          required
+        />
+        <div id="emailError" class="form-text text-danger" *ngIf="email.invalid">Email Can't Be Empty.</div>
+      </div>
+  
+      <!-- Password Field -->
+      <div class="mb-3">
+        <label for="signupPassword" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="signupPassword"
+          #password="ngModel"
+          [(ngModel)]="user.userPassword"
+          name="password"
+          required
+        />
+        <div id="passwordError" class="form-text text-danger" *ngIf="password.invalid">Password Can't Be Empty.</div>
+      </div>
+  
+      <!-- Confirm Password Field -->
+      <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Confirm Password</label>
+        <input
+        type="password"
+        class="form-control"
+        id="confirmPassword"
+        #confirmPassword="ngModel"
+        [(ngModel)]="user.userConfirmPassword"
+        name="confirmPassword"
+        required
+      />
+      
+      <div class="form-text text-danger" *ngIf="user.userPassword !== user.userConfirmPassword">
+        Passwords do not match.
+      </div>
+      
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+  </div>
+  
