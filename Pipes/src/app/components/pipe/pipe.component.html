@@ -1,0 +1,18 @@
+<!-- pipes are used to transform  the value without changing the original value -->
+<!-- inbuilt pipes -->
+<!-- custom pipes -->
+<!-- third party pipes -->
+<h1>pipe works!</h1>
+<p>My Name Is {{firstName | lowercase}}</p>
+<p> My Name Is {{firstName | uppercase}}</p>
+<p> My Number Is {{number | currency }}</p>
+<p> My number Is {{number | currency :"INR"}}</p>
+<p> My floatingNumber Is {{floatingNumber | number :'3.1-2'}}</p>
+<p>date is {{todaydate}}</p>
+<p>date {{todaydate | date:'yyyy-mm-dd'}}</p>
+<p>date is {{date}}</p>
+<p>date {{date | date:'yyyy-mm-dd'}}</p>
+<p>date {{date | date:'dd-mm-yyyy'}}</p>
+<hr>
+<h1>Custom Pipes Works</h1>
+<p>{{3|squarePipe}}</p>
