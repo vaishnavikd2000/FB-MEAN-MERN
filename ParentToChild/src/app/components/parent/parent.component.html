@@ -1,0 +1,16 @@
+<h1>Parent works!</h1>
+<h4>{{ userName }}</h4>
+<h3>Data from child component: {{ subjectName }}</h3>
+<input type="text" [(ngModel)]="inputValue" placeholder="Enter inputValue"><br><br>
+<input type="text" [(ngModel)]="inputValues" placeholder="Enter inputValues"><br><br>
+<button (click)="valueSave()">Value Send To Child</button>
+<hr>
+<h1>Child Component Is Below</h1>
+<app-child 
+  [arr]="array" 
+  [str]="str" 
+  [firstName]="userName" 
+  [inputValue]="inputValue" 
+  [inputValues]="value" 
+  (sendChildValue)="recieveValueFromChild($event)">
+</app-child>
