@@ -1,0 +1,87 @@
+<!-- Directive are used to change the  dom layout , apperance , and structure -->
+<!-- 1. structual directive -->
+<!-- 2.attribute directive -->
+<!-- attribute directive used chnage the DOM apperance nd behiaour of webpage -->
+<!-- 3. custom directive -->
+<h1> Structual Directive works!</h1>
+<!-- *ngIf -->
+<!-- *ngFor -->
+<!-- *ngSwitch -->
+<!-- interpolation -->
+<h1>Interpolation</h1>
+<p>{{firstName}}</p>
+<hr>
+<!-- *ngIf -->
+<h1>*ngIf Directive </h1>
+<div *ngIf="userName">
+    <h3>User Name Is <strong>{{userName}}</strong></h3>
+</div>
+<hr>
+<h1>*ngIf (IfElse) Directive </h1>
+<ng-template #deafult>
+    <h3>This is daefult Template Value</h3>
+</ng-template>
+<ng-template #deafult1>
+    <h3>This is daefult1 Template Value</h3>
+</ng-template>
+<div *ngIf="showValue ; then deafult ;else deafult1"></div>
+<hr>
+<!-- *ngFor -->
+<h1>*ngFor Directive</h1>
+<ul>
+    <li *ngFor="let player of players">
+        {{ player }}
+    </li>
+</ul>
+<hr>
+<h1>*ngSwitch Directive</h1>
+<div [ngSwitch]="playername">
+    <h3 *ngSwitchCase="'rohit'">Rohit Selected</h3>
+    <h3 *ngSwitchCase="'Virat'">Virat Selected</h3>
+    <h3 *ngSwitchCase="'Dhoni'">Dhoni Selected</h3>
+    <h3 *ngSwitchDefault>Players Not Selected</h3>
+</div>
+<hr>
+<h1>*ngSwitch (ngFor Multiple Value) Directive</h1>
+<div [ngSwitch]="playername">
+    <div *ngFor="let player of players">
+        <h3 *ngSwitchCase="player">{{ player }} Selected</h3>
+    </div>
+    <h3 *ngSwitchDefault>Player Not Selected</h3>
+</div>
+<hr>
+<h1>Attribute Directives</h1>
+<!-- ngStyle -->
+<!-- ngClass -->
+<!-- ngModel -->
+<div [ngClass]="headingClass">
+    <h4>This Is ngClass ClassName Attribute</h4>
+</div>
+<div [ngClass]="myClass">
+    <h4>This Is ngClass Condition Attribute1</h4>
+</div>
+<div [ngClass]="applycss ? 'heading' : 'disabled'">
+    <h4>This Is ngClass Toggle  Attribute using ClassName</h4>
+</div>
+<div [ngClass]="applycss ? myClass : disabledClass">
+    <h4>This Is ngClass Toggle  Attribute using VairiableName</h4>
+</div>
+<button (click)="changeColor()">Toggle Class</button>
+<hr>
+<h1>ngStyle Derective</h1>
+<div [ngStyle]="mystyle">
+    <h4>This is ngStyle div</h4>
+</div>
+<div [ngStyle]="showValue ? activeStyle :disabledStyle">
+    <h4>This is ngStyle Condition div</h4>
+</div>
+<hr>
+<h1>ngModel Directive</h1>
+<div>
+    <input type="text" name="name" id="name" [(ngModel)]="firstName">
+    <button type="button" ((click))="valueChange()">Show First Name</button>
+</div>
+<hr>
+<div appColorDirective>
+<h1 >Custom Directive </h1>
+</div>
