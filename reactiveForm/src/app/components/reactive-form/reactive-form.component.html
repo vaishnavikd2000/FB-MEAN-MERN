@@ -1,0 +1,72 @@
+<div class="container m-4">
+  <h2>Registration Form</h2>
+  <form [formGroup]="regForm" (ngSubmit)="onSubmit()">
+    <!-- First Name Field -->
+    <div class="mb-3">
+      <label for="exampleInputName" class="form-label">First Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputName"
+        aria-describedby="nameHelp"
+        formControlName="name"
+      />
+      <div
+        id="nameHelp"
+        class="text-danger"
+        *ngIf="regForm.get('name')?.invalid && regForm.get('name')?.touched"
+      >
+        <small *ngIf="regForm.get('name')?.errors?.['required']">Name is required.</small>
+        <small *ngIf="regForm.get('name')?.errors?.['minlength']">
+          Name must be at least 2 characters long.
+        </small>
+      </div>
+    </div>
+
+    <!-- Email Field -->
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email Address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        formControlName="email"
+      />
+      <div
+        id="emailHelp"
+        class="text-danger"
+        *ngIf="regForm.get('email')?.invalid && regForm.get('email')?.touched"
+      >
+        <small *ngIf="regForm.get('email')?.errors?.['required']">Email is required.</small>
+        <small *ngIf="regForm.get('email')?.errors?.['email']">Enter a valid email address.</small>
+      </div>
+    </div>
+
+    <!-- Password Field -->
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        formControlName="password"
+      />
+      <div
+        class="text-danger"
+        *ngIf="regForm.get('password')?.invalid && regForm.get('password')?.touched"
+      >
+        <small *ngIf="regForm.get('password')?.errors?.['required']">Password is required.</small>
+        <small *ngIf="regForm.get('password')?.errors?.['minlength']">
+          Password must be at least 6 characters long.
+        </small>
+        <small *ngIf="regForm.get('password')?.errors?.['pattern']">
+          Password must include letters, numbers, or special characters "&#64;".
+        </small>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary" [disabled]="regForm.invalid">Submit</button>
+  </form>
+</div>

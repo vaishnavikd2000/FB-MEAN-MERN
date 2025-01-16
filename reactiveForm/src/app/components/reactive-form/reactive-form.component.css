@@ -1,0 +1,83 @@
+/* General Body Style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Use full height of the viewport */
+    width: 100%;    /* Full width */
+    box-sizing: border-box;
+  }
+  
+  /* Container Styling */
+  .container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 0;
+  }
+  
+  /* Form Title */
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  /* Label Styling */
+  .form-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  /* Input Field Styling */
+  input.form-control {
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  input.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Error Message Styling */
+  .text-danger {
+    font-size: 12px;
+    color: #dc3545;
+  }
+  
+  /* Submit Button Styling */
+  button.btn-primary {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button.btn-primary:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  button.btn-primary:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  
