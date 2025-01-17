@@ -1,0 +1,34 @@
+<h1>User Component Loaded Successfully!</h1>
+
+<button (click)="fetchUsers()" class="m-2 ">Fetch Users</button>
+<button (click)="fetchApiData()" class="m-2 bg-danger">Fetch Data API</button>
+
+<!-- Display Users -->
+<div *ngIf="users.length > 0">
+  <h3>User List:</h3>
+  <ul>
+    <li *ngFor="let user of users">
+      <strong>ID:</strong> {{ user.id }},
+      <strong>Name:</strong> {{ user.name }},
+      <strong>Role:</strong> {{ user.role }}
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="apiData.length === 0">
+  <p>No users fetched yet.</p>
+</div>
+<div *ngIf="apiData.length > 0">
+    <h3>User List From API:</h3>
+    <ul>
+      <li *ngFor="let data of apiData">
+        <strong>ID:</strong> {{ data.id }},
+        <strong>Name:</strong> {{ data.name }},
+        <strong>UserName:</strong> {{ data.username }}
+      </li>
+    </ul>
+  </div>
+  
+  <div *ngIf="users.length === 0">
+    <p>No users fetched yet.</p>
+  </div>
