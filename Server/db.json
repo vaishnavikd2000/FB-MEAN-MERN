@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "2",
+      "name": "Vaishnavi ",
+      "email": "jane@example.com",
+      "role": "develper"
+    },
+    {
+      "id": "3",
+      "name": "vishal",
+      "email": "alice@example.com",
+      "role": "Viewer"
+    },
+    {
+      "id": "4",
+      "name": "Bob Brown",
+      "email": "bob@example.com",
+      "role": "Editor"
+    },
+    {
+      "id": "b4f7",
+      "name": "prajkta",
+      "role": "Viewer",
+      "email": ""
+    }
+  ]
+}
