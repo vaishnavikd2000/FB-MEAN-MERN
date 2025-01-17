@@ -1,0 +1,25 @@
+.pagination-controls {
+    margin-top: 20px;
+  }
+  
+  .pagination-controls a {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .pagination-controls a.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+  
+  .pagination-controls a:hover {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+  }
+  

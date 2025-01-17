@@ -1,0 +1,36 @@
+<div class="container mt-4">
+    <h3 class="text-center">Pagination Example</h3>
+  
+    <!-- Table for paginated data -->
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-light">
+          <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Loop through paginated data -->
+          <tr *ngFor="let pagination of paginationData | paginate: { itemsPerPage: 13, currentPage: page }">
+            <td>{{ pagination.name }}</td>
+            <td>{{ pagination.role }}</td>
+            <td>{{ pagination.email }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Pagination controls -->
+    <div class="d-flex justify-content-end mt-3">
+      <pagination-controls 
+        (pageChange)="page = $event" 
+        [previousLabel]="'&laquo; Previous'" 
+        [nextLabel]="'Next &raquo;'"
+        [maxSize]="5" 
+        [autoHide]="true" 
+        class="pagination"></pagination-controls>
+    </div>
+  </div>
+  
